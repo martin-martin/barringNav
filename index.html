@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>navbar</title>
+	<link href="./navbar_files/css" rel="stylesheet">
+	<style type="text/css">
+
+		/*COLOR SCHEME GREEN
+		main(500): #8bc34a;
+		light(300): #aed581;
+		dark(900): #33691e;
+		- -
+		flashy(a400): #76ff03;
+		faint(50): #f1f8e9;
+		- - -
+		DROPINS
+		amber(500): #ffc107;
+		deepOrange(500): #ff5722;
+		Red(500): #f44336;
+		*/
+		body {
+			font-family: 'Open Sans', sans-serif;
+		}
+		.content {
+			padding-top: 60px;
+		}
+		nav {
+			display: flex;
+			position: fixed;
+			width: 100%;
+			margin-bottom: 10px;
+			background-color: #8bc34a;
+		}
+		.nav-dropdown {
+		    position: relative;
+		    display: inline-block;
+		}
+		.dropbtn {
+		    background-color: #8bc34a;
+		    color: white;
+		    padding: 16px;
+		    font-size: 16px;
+		    border: none;
+		    cursor: pointer;
+		}
+		.dropdown-content {
+		    display: none;
+		    position: absolute;
+		    background-color: #f9f9f9;
+		    min-width: 160px;
+		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		    z-index: 1;
+		}
+		.dropdown-content a {
+		    color: black;
+		    padding: 12px 16px;
+		    text-decoration: none;
+		    display: block;
+		}
+		/* change color of dropdown links on hover */
+		.dropdown-content a:hover {
+			background-color: #ffd54f;
+		}
+		/* Show the dropdown menu on hover */
+		.nav-dropdown:hover .dropdown-content {
+		    display: block;
+		}
+		/* change the background color of the dropdown button when the dropdown content is shown */
+		.nav-dropdown:hover .dropbtn {
+		    background-color: #ffc107;
+		}
+
+		/*add responsive layout*/
+
+		/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+		@media screen and (max-width: 680px) {
+		  nav.nav-dropdown li:not(:first-child) {
+		  	display: none;
+		  }
+		  nav.nav-dropdown div.icon {
+		    float: right;
+		    display: inline-block;
+		  }
+		}
+
+		/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+		@media screen and (max-width: 680px) {
+		  nav.nav-dropdown.responsive {
+		  	position: relative;
+		  }
+		  nav.nav-dropdown.responsive div.icon {
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		  }
+		  nav.nav-dropdown.responsive.dropdown.content li {
+		    float: none;
+		    display: inline;
+		  }
+		  nav.nav-dropdown.responsive li a {
+		    display: block;
+		    text-align: left;
+		  }
+		}
+	</style>
+</head>
+<body>
+	<nav>
+	<!-- https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/ -->
+		<div class="nav-dropdown">
+			<button class="dropbtn">Listen</button>
+  			<div class="dropdown-content">
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Playlist</a>
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Add Song</a>
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Discover Music</a>
+			</div>
+		</div>
+		<div class="nav-dropdown">
+			<button class="dropbtn">Write</button>
+  			<div class="dropdown-content">
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Question of the Day</a>
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Survival Phrase</a>
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Answer a Question</a>
+			</div>
+		</div>
+		<div class="nav-dropdown">
+			<button class="dropbtn">Study</button>
+  			<div class="dropdown-content">
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Study Flashcards</a>
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Flashcard Decks</a>
+			</div>
+		</div>
+		<div class="nav-dropdown">
+			<button class="dropbtn">More</button>
+  			<div class="dropdown-content">
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Extra Resources</a>
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Preferences</a>
+				<a href="file:///Users/Martin/Documents/_projects/WebDev/JS_navbar/navbar.html">Sign Out</a>
+			</div>
+		</div>
+		<div class="icon">Hei!</div>
+	</nav>
+	<div class="content">
+		What is Lorem Ipsum?
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like aldus PageMaker including versions of Lorem Ipsum.
+
+		Why do we use it?
+		It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'content here, content here', making it look like readable english. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+		Where does it come from?
+		contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 bc, making it over 2000 years old. Richard Mcclintock, a Latin professor at Hampden-Sydney college in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de finibus bonorum et Malorum" (The extremes of Good and evil) by cicero, written in 45 bc. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+		The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de finibus bonorum et Malorum" by cicero are also reproduced in their exact original form, accompanied by english versions from the 1914 translation by H. Rackham.
+
+		Where can I get some?
+		There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. all the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+
+		5
+			paragraphs
+			words
+			bytes
+			lists
+			Start with 'Lorem
+		ipsum dolor sit amet...'
+		Generate Lorem Ipsum
+		Translations: can you help translate this site into a foreign language ? Please email us with details if you can help.
+		There are now a set of mock banners available here in three colours and in a range of standard banner sizes:
+		bannersbannersbanners
+		donate: If you use this site regularly and would like to help keep the site on the Internet, please consider donating a small sum to help pay for the hosting and bandwidth bill. There is no minimum donation, any sum is appreciated - click here to donate using PayPal. Thank you for your support.
+		chrome firefox add-on NodeJS TeX Package Python Interface GTK Lipsum Rails .NeT Groovy adobe Plugin
+		The standard Lorem Ipsum passage, used since the 1500s
+
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+		Section 1.10.32 of "de finibus bonorum et Malorum", written by cicero in 45 bc
+
+		"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+
+		1914 translation by H. Rackham
+
+		"but I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? but who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+
+		Section 1.10.33 of "de finibus bonorum et Malorum", written by cicero in 45 bc
+
+		"at vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+
+		1914 translation by H. Rackham
+
+		"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. but in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+	</div>
+
+</body></html>
